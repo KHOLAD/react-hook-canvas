@@ -5,9 +5,7 @@ import { CanvasImagesContainer } from "./canvas/image-container";
 export function MainContainer() {
     const [ imageUrl, setImageUrl ] = useState(null);
 
-    const handleSubmit = value => {
-        setImageUrl(value);
-    };
+    const handleSubmit = value => setImageUrl(value);
 
     return (
         <>
