@@ -6,6 +6,13 @@ export function TensorPredictionComponent({canvas}) {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState({ className: null, probability: null });
 
+    const handleResults = predictions => {
+        const result = predictions.map(p => ({
+            ...p, probability: Math.round(p.probability * 100) / 100
+        })).reduce((acc, cur) => (acc.probability > cur.probability) ? acc : cur);
+        setResult(result);
+    };
+
     useEffect(() => {
         (async () => {
             if (!canvas) { return }
@@ -27,14 +34,6 @@ export function TensorPredictionComponent({canvas}) {
             setLoading(false);
         })()
     }, [canvas]);
-
-    const handleResults = (predictions) => {
-        const result = predictions.map(p => ({
-            ...p,
-            probability: Math.round(p.probability * 100) / 100
-        })).reduce((acc, cur) => (acc.probability > cur.probability) ? acc : cur);
-        setResult(result);
-    };
 
     return (
         <>
