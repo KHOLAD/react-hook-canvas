@@ -9,6 +9,7 @@ export function CanvasImageComponent({imageUrl, onChange}) {
 
         const canvas = canvasRef.current;
         const context = canvasRef.current['getContext']("2d");
+        context.clearRect(0, 0, canvas['width'], canvas['height']);
 
         image_container.crossOrigin = "anonymous";
         image_container.src = CORS_EVERYWHERE + imageUrl;
