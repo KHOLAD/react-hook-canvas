@@ -12,7 +12,7 @@ export function CanvasImagesContainer({imageUrl}) {
     return (
         <div className="container m-5">
             <TensorPredictionComponent imageData={ imageData } />
-            <CanvasImageComponent imageUrl={imageUrl} onChange={ handleImageChange } />
+            <CanvasImageComponent imageUrl={ imageUrl } onChange={ handleImageChange } />
         </div>
     )
 }

@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {LoadingComponent} from "../loader/loader";
 import * as mobilenet from '@tensorflow-models/mobilenet';
 
 export function TensorPredictionComponent({imageData}) {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [result, setResult] = useState({ className: null, probability: null });
 
-    const handleResults = predictions => {
+    const handleResults = useCallback(predictions => {
         const result = predictions.map(p => ({
             ...p, probability: Math.round(p.probability * 100) / 100
         })).reduce((acc, cur) => (acc.probability > cur.probability) ? acc : cur);
         setResult(result);
-    };
+    }, []);
 
     useEffect(() => {
         if (!imageData) { return }
 
-        setLoading(true);
         (async () => {
             // Load the model.
             const model = await mobilenet.load();
