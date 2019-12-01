@@ -16,9 +16,16 @@ export function CanvasImageComponent({imageUrl, onChange}) {
         image_container.onload = () => {
             canvas.width = image_container.width;
             canvas.height = image_container.height;
-
+            // Preview image
             context.drawImage(image_container, 0, 0);
-            onChange(canvas);
+            // Emit image data
+            const imageData = context.getImageData(
+                image_container.x,
+                image_container.y,
+                image_container.width,
+                image_container.height
+            );
+            onChange(imageData);
         };
     }, [imageUrl, onChange]);
 

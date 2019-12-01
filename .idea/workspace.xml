@@ -4,6 +4,7 @@
     <list default="true" id="6247838b-9b92-44d6-bf92-8f5a926eb023" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/components/canvas/canvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/canvas.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/canvas/image-container.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/image-container.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/canvas/tensor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/canvas/tensor.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/canvas/image-container.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="273">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -43,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/canvas/canvas.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="356">
+              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -52,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/canvas/tensor.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="23">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -127,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/components/loader/loader.css" />
         <option value="$PROJECT_DIR$/src/components/loader/loader.jsx" />
         <option value="$PROJECT_DIR$/src/components/main-container.jsx" />
-        <option value="$PROJECT_DIR$/src/components/canvas/canvas.jsx" />
         <option value="$PROJECT_DIR$/src/components/canvas/image-container.jsx" />
+        <option value="$PROJECT_DIR$/src/components/canvas/canvas.jsx" />
         <option value="$PROJECT_DIR$/src/components/canvas/tensor.jsx" />
       </list>
     </option>
@@ -238,7 +239,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35037000" />
+    <option name="totallyTimeSpent" value="35992000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/canvas/image-container.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="273">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -454,15 +455,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/canvas/canvas.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="356">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/canvas/tensor.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="23">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>

@@ -3,15 +3,15 @@ import { CanvasImageComponent } from "./canvas";
 import { TensorPredictionComponent } from "./tensor";
 
 export function CanvasImagesContainer({imageUrl}) {
-    const [canvas, setCanvas] = useState(null);
+    const [imageData, setImageData] = useState(null);
 
     const handleImageChange = useCallback((imageData) => {
-        setCanvas(imageData)
+        setImageData(imageData)
     }, []);
 
     return (
         <div className="container m-5">
-            <TensorPredictionComponent canvas={ canvas } />
+            <TensorPredictionComponent imageData={ imageData } />
             <CanvasImageComponent imageUrl={imageUrl} onChange={ handleImageChange } />
         </div>
     )

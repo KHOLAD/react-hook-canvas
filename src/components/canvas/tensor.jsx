@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {LoadingComponent} from "../loader/loader";
 import * as mobilenet from '@tensorflow-models/mobilenet';
 
-export function TensorPredictionComponent({canvas}) {
+export function TensorPredictionComponent({imageData}) {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState({ className: null, probability: null });
 
@@ -14,26 +14,26 @@ export function TensorPredictionComponent({canvas}) {
     };
 
     useEffect(() => {
+        setLoading(true);
         (async () => {
-            if (!canvas) { return }
-            setLoading(true);
+            if (!imageData) { return }
             // Load the model.
             const model = await mobilenet.load();
             // Classify the image.
-            const predictions = await model.classify(canvas);
+            const predictions = await model.classify(imageData);
             console.log('Predictions:', predictions);
             // Sets prediction results
             handleResults(predictions);
             // Get the Logs.
-            const logits = model.infer(canvas);
+            const logits = model.infer(imageData);
             logits.print();
             // Get the embedding.
-            const embedding = model.infer(canvas, true);
+            const embedding = model.infer(imageData, true);
             embedding.print();
 
             setLoading(false);
         })()
-    }, [canvas]);
+    }, [imageData]);
 
     return (
         <>
