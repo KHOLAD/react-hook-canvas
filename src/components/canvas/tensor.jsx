@@ -14,9 +14,10 @@ export function TensorPredictionComponent({imageData}) {
     };
 
     useEffect(() => {
+        if (!imageData) { return }
+
         setLoading(true);
         (async () => {
-            if (!imageData) { return }
             // Load the model.
             const model = await mobilenet.load();
             // Classify the image.

@@ -14,10 +14,18 @@ export function CanvasImageComponent({imageUrl, onChange}) {
         image_container.src = CORS_EVERYWHERE + imageUrl;
 
         image_container.onload = () => {
-            canvas.width = image_container.width;
-            canvas.height = image_container.height;
             // Preview image
-            context.drawImage(image_container, 0, 0);
+            const wrh = image_container.width / image_container.height;
+
+            let new_width = canvas['width'];
+            let new_height = new_width / wrh;
+
+            if (new_height > canvas['height']) {
+                new_height = canvas['height'];
+                new_width = new_height * wrh;
+            }
+
+            context.drawImage(image_container, 0, 0, new_width , new_height);
             // Emit image data
             const imageData = context.getImageData(
                 image_container.x,
@@ -25,10 +33,11 @@ export function CanvasImageComponent({imageUrl, onChange}) {
                 image_container.width,
                 image_container.height
             );
+
             onChange(imageData);
         };
     }, [imageUrl, onChange]);
 
-    return <canvas ref={canvasRef} />;
+    return <canvas width={1280} height={1280} ref={canvasRef} />;
 }
 
