@@ -30,7 +30,7 @@ export function ImageFormComponent({onsubmit}) {
     };
 
     return (
-        <React.Fragment>
+        <>
             <div className="container flex">
                 <InputComponent
                     invalid={ formState.value && !formState.valid }
@@ -39,6 +39,6 @@ export function ImageFormComponent({onsubmit}) {
                     onClick={ handleSubmit }
                     disabled={ !formState.valid || (formState.submitted && !formState.dirty) } />
             </div>
-        </React.Fragment>
+        </>
     );
 }

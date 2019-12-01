@@ -11,6 +11,7 @@ export function TensorPredictionComponent({imageData}) {
             ...p, probability: Math.round(p.probability * 100) / 100
         })).reduce((acc, cur) => (acc.probability > cur.probability) ? acc : cur);
         setResult(result);
+        setLoading(false);
     }, []);
 
     useEffect(() => {
@@ -30,10 +31,8 @@ export function TensorPredictionComponent({imageData}) {
             // Get the embedding.
             const embedding = model.infer(imageData, true);
             embedding.print();
-
-            setLoading(false);
         })()
-    }, [imageData]);
+    }, [imageData, handleResults]);
 
     return (
         <>
