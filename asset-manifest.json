@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-hook-canvas/static/css/main.28819101.chunk.css",
-    "main.js": "/react-hook-canvas/static/js/main.896c8b6b.chunk.js",
-    "main.js.map": "/react-hook-canvas/static/js/main.896c8b6b.chunk.js.map",
+    "main.js": "/react-hook-canvas/static/js/main.ba21ec47.chunk.js",
+    "main.js.map": "/react-hook-canvas/static/js/main.ba21ec47.chunk.js.map",
     "runtime-main.js": "/react-hook-canvas/static/js/runtime-main.c8e84b5a.js",
     "runtime-main.js.map": "/react-hook-canvas/static/js/runtime-main.c8e84b5a.js.map",
     "static/js/2.07a4bf14.chunk.js": "/react-hook-canvas/static/js/2.07a4bf14.chunk.js",
     "static/js/2.07a4bf14.chunk.js.map": "/react-hook-canvas/static/js/2.07a4bf14.chunk.js.map",
     "index.html": "/react-hook-canvas/index.html",
-    "precache-manifest.dd448c2b2d165aad61afc8c5aa66d722.js": "/react-hook-canvas/precache-manifest.dd448c2b2d165aad61afc8c5aa66d722.js",
+    "precache-manifest.65f40e59dfcc4f5763ec22455f681e3d.js": "/react-hook-canvas/precache-manifest.65f40e59dfcc4f5763ec22455f681e3d.js",
     "service-worker.js": "/react-hook-canvas/service-worker.js",
     "static/css/main.28819101.chunk.css.map": "/react-hook-canvas/static/css/main.28819101.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.c8e84b5a.js",
     "static/js/2.07a4bf14.chunk.js",
     "static/css/main.28819101.chunk.css",
-    "static/js/main.896c8b6b.chunk.js"
+    "static/js/main.ba21ec47.chunk.js"
   ]
 }
