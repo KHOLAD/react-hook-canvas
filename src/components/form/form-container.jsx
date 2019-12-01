@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { InputComponent } from "./input";
 import { IsValidUrl } from "./validation";
 import { SubmitButtonComponent } from "./submit-button";
 
-export function ImageFormComponent({onsubmit}) {
+export const ImageFormComponent = React.memo(({onsubmit}) => {
     const [ formState, setFormState ] = useState({
         value: null,
         isValid: null,
@@ -11,23 +11,23 @@ export function ImageFormComponent({onsubmit}) {
         dirty: false
     });
 
-    const handleSubmit = () => {
+    const handleSubmit = useCallback(() => {
         setFormState({
             ...formState,
             submitted: true,
             dirty: false
         });
         onsubmit(formState.value);
-    };
+    }, [formState, onsubmit]);
 
-    const handleChanges = (value) => {
+    const handleChanges = useCallback((value) => {
         setFormState({
             ...formState,
             value,
             valid: IsValidUrl(value),
             dirty: true
         });
-    };
+    }, [formState]);
 
     return (
         <>
@@ -41,4 +41,4 @@ export function ImageFormComponent({onsubmit}) {
             </div>
         </>
     );
-}
+});

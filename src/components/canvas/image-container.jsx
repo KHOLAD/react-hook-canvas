@@ -2,7 +2,7 @@ import React, { useState, useCallback }  from 'react';
 import { CanvasImageComponent } from "./canvas";
 import { TensorPredictionComponent } from "./tensor";
 
-export function CanvasImagesContainer({imageUrl}) {
+export const CanvasImagesContainer = React.memo(({imageUrl}) => {
     const [imageData, setImageData] = useState(null);
 
     const handleImageChange = useCallback((imageData) => {
@@ -15,4 +15,4 @@ export function CanvasImagesContainer({imageUrl}) {
             <CanvasImageComponent imageUrl={ imageUrl } onChange={ handleImageChange } />
         </div>
     )
-}
+});
