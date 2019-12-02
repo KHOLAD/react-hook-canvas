@@ -1,26 +1,22 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {LoadingComponent} from "../loader/loader";
 import * as mobilenet from '@tensorflow-models/mobilenet';
+import {PredictionTableComponent} from "../table";
 
 export function TensorPredictionComponent({imageData}) {
     const [loading, setLoading] = useState(true);
-    const [result, setResult] = useState({ className: null, probability: null });
+    const [result, setResult] = useState([]);
     const [pending, setPending] = useState(false);
 
-    const handleResults = useCallback(predictions => {
-        const result = predictions.map(p => ({
-            ...p, probability: Math.round(p.probability * 100) / 100
-        })).reduce((acc, cur) => (acc.probability > cur.probability) ? acc : cur);
-        setResult(result);
+    const handleResult = useCallback(predictions => {
+        setResult(predictions);
         setLoading(false);
     }, []);
 
     useEffect(() => {
         if (!imageData) { return }
 
-        if (result.className && result.probability) {
-            setPending(true);
-        }
+        setPending(true);
 
         (async () => {
             // Load the model.
@@ -29,7 +25,7 @@ export function TensorPredictionComponent({imageData}) {
             const predictions = await model.classify(imageData);
             console.log('Predictions:', predictions);
             // Sets prediction results
-            handleResults(predictions);
+            handleResult(predictions);
             // Get the Logs.
             const logits = model.infer(imageData);
             logits.print();
@@ -39,23 +35,28 @@ export function TensorPredictionComponent({imageData}) {
 
             setPending(false);
         })()
-    }, [imageData, handleResults]);
+    }, [imageData, handleResult]);
 
     return (
         <>
             { loading && <LoadingComponent /> }
             {
-                !loading && result.className && result.probability &&
+                !loading && result[0].className && result[0].probability &&
                 <div className={`my-5 px-6 py-4 rounded overflow-hidden shadow-lg ${pending ? 'opacity-50' : ''}`}>
                     <div className="font-bold text-xl mb-2">Result</div>
                     <p className="text-gray-700 text-base">
                         {
-                            result.className.toUpperCase()
+                            result[0].className.toUpperCase()
                         } /
                         Probability: {
-                            (result.probability * 100).toFixed(0) + "%"
+                            (result[0].probability * 100).toFixed(0) + "%"
                         }
                     </p>
+
+                    <PredictionTableComponent
+                        headers={['Class name', 'Probability']}
+                        content={result}
+                    />
                 </div>
             }
         </>
