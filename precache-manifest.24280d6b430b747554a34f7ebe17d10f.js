@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "556b1274c67ec44e3b45e4295d1bb214",
+    "revision": "cc635aa0eba7574ebe121eb8f49a73ef",
     "url": "/react-hook-canvas/index.html"
   },
   {
-    "revision": "29da65fd2c5164b054ad",
+    "revision": "baf3f507f1ddb23f4e22",
     "url": "/react-hook-canvas/static/css/main.28819101.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-hook-canvas/static/js/2.07a4bf14.chunk.js"
   },
   {
-    "revision": "29da65fd2c5164b054ad",
-    "url": "/react-hook-canvas/static/js/main.24c3af31.chunk.js"
+    "revision": "baf3f507f1ddb23f4e22",
+    "url": "/react-hook-canvas/static/js/main.6107b67d.chunk.js"
   },
   {
     "revision": "124154cd9ad027ac931d",
