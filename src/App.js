@@ -2,6 +2,7 @@ import React, {useCallback, useState} from 'react';
 import './App.css';
 import {ImageFormComponent} from "./components/form/form-container";
 import {CanvasImagesContainer} from "./components/canvas/image-container";
+import {DefaultImageComponent} from "./components/recommended";
 
 function App() {
     const [ imageUrl, setImageUrl ] = useState(null);
@@ -13,6 +14,7 @@ function App() {
     return (
         <div className="m-10 flex flex-col items-center flex container mx-auto">
             <h1 className="m-8 font-bold">Whats on the image?</h1>
+            <DefaultImageComponent handleClick={ handleSubmit } />
 
             <ImageFormComponent onsubmit={ handleSubmit } />
             { imageUrl && <CanvasImagesContainer imageUrl={ imageUrl } /> }
