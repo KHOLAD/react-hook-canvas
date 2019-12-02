@@ -9,7 +9,7 @@ const cat_images = [
     'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.imgur.com%2FlCFGt7m.jpg&f=1&nofb=1'
 ];
 
-export const DefaultImageComponent = ({handleClick}) => {
+export const RandomImageComponent = ({handleClick}) => {
 
   const onClick = () => {
       handleClick(cat_images[Math.floor(Math.random() * cat_images.length)]);

@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import './App.css';
 import {ImageFormComponent} from "./components/form/form-container";
-import {DefaultImageComponent} from "./components/recommended";
+import {RandomImageComponent} from "./components/random";
 import {TensorPredictionComponent} from "./components/canvas/tensor";
 import {CanvasImageComponent} from "./components/canvas/canvas";
 
@@ -21,7 +21,7 @@ function App() {
         <div className="m-10 flex flex-col items-center flex container mx-auto">
             <h1 className="m-8 font-bold">Whats on the image?</h1>
 
-            <DefaultImageComponent handleClick={ handleSubmit } />
+            <RandomImageComponent handleClick={ handleSubmit } />
 
             <ImageFormComponent onsubmit={ handleSubmit } />
             { imageUrl &&

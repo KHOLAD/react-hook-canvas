@@ -5,6 +5,7 @@ import * as mobilenet from '@tensorflow-models/mobilenet';
 export function TensorPredictionComponent({imageData}) {
     const [loading, setLoading] = useState(true);
     const [result, setResult] = useState({ className: null, probability: null });
+    const [pending, setPending] = useState(false);
 
     const handleResults = useCallback(predictions => {
         const result = predictions.map(p => ({
@@ -16,6 +17,10 @@ export function TensorPredictionComponent({imageData}) {
 
     useEffect(() => {
         if (!imageData) { return }
+
+        if (result.className && result.probability) {
+            setPending(true);
+        }
 
         (async () => {
             // Load the model.
@@ -31,6 +36,8 @@ export function TensorPredictionComponent({imageData}) {
             // Get the embedding.
             const embedding = model.infer(imageData, true);
             embedding.print();
+
+            setPending(false);
         })()
     }, [imageData, handleResults]);
 
@@ -39,7 +46,7 @@ export function TensorPredictionComponent({imageData}) {
             { loading && <LoadingComponent /> }
             {
                 !loading && result.className && result.probability &&
-                <div className="my-5 px-6 py-4 rounded overflow-hidden shadow-lg">
+                <div className={`my-5 px-6 py-4 rounded overflow-hidden shadow-lg ${pending ? 'opacity-50' : ''}`}>
                     <div className="font-bold text-xl mb-2">Result</div>
                     <p className="text-gray-700 text-base">
                         {
