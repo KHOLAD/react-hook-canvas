@@ -19,5 +19,8 @@ export const SubmitButtonComponent = ({disabled, onClick, pending}) => {
         `${disabled || pending ? 'opacity-50 cursor-not-allowed' : ''}`
     ];
 
-    return <button disabled={disabled || pending} onClick={onClick} className={buttonClasses.join(' ')}>Submit</button>
+    return <button
+        disabled={ disabled || pending }
+        onClick={ onClick }
+        className={ buttonClasses.join(' ') }>Submit</button>
 };

@@ -33,8 +33,10 @@ export const ImageFormComponent = React.memo(({onsubmit}) => {
         <>
             <div className="container flex">
                 <InputComponent
+                    onEnter={ handleSubmit }
                     invalid={ formState.value && !formState.valid }
                     valueChange={ handleChanges } />
+
                 <SubmitButtonComponent
                     onClick={ handleSubmit }
                     disabled={ !formState.valid || (formState.submitted && !formState.dirty) } />

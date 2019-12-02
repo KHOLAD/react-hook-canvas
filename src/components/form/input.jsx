@@ -1,6 +1,6 @@
 import React from  'react';
 
-export const InputComponent = ({valueChange, invalid}) => {
+export const InputComponent = ({valueChange, invalid, onEnter}) => {
     const inputClasses = [
         'bg-white',
         'focus:outline-none',
@@ -18,6 +18,7 @@ export const InputComponent = ({valueChange, invalid}) => {
     ];
 
     return <input
+        onKeyDown={(event => event.key === 'Enter' ? onEnter() : null)}
         onChange={({target}) => valueChange(target.value)}
         className={inputClasses.join(' ')}
         type="text"
