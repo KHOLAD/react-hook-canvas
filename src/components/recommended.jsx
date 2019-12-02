@@ -16,8 +16,8 @@ export const DefaultImageComponent = ({handleClick}) => {
   };
 
   return (
-      <div className="m-1 w-full text-center py-4 lg:px-4" onClick={ onClick }>
-          <div
+      <div className="m-1 w-full text-center py-4 lg:px-4">
+          <div onClick={ onClick }
               className="cursor-pointer select-none p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
               role="alert">
                     <span
