@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/react-hook-canvas/static/css/main.28819101.chunk.css",
-    "main.js": "/react-hook-canvas/static/js/main.f086265d.chunk.js",
-    "main.js.map": "/react-hook-canvas/static/js/main.f086265d.chunk.js.map",
+    "main.js": "/react-hook-canvas/static/js/main.62fe39cc.chunk.js",
+    "main.js.map": "/react-hook-canvas/static/js/main.62fe39cc.chunk.js.map",
     "runtime-main.js": "/react-hook-canvas/static/js/runtime-main.c8e84b5a.js",
     "runtime-main.js.map": "/react-hook-canvas/static/js/runtime-main.c8e84b5a.js.map",
-    "static/js/2.07a4bf14.chunk.js": "/react-hook-canvas/static/js/2.07a4bf14.chunk.js",
-    "static/js/2.07a4bf14.chunk.js.map": "/react-hook-canvas/static/js/2.07a4bf14.chunk.js.map",
+    "static/js/2.5e754014.chunk.js": "/react-hook-canvas/static/js/2.5e754014.chunk.js",
+    "static/js/2.5e754014.chunk.js.map": "/react-hook-canvas/static/js/2.5e754014.chunk.js.map",
     "index.html": "/react-hook-canvas/index.html",
-    "precache-manifest.f534a18d8ee91967ff7b72240dc26b0a.js": "/react-hook-canvas/precache-manifest.f534a18d8ee91967ff7b72240dc26b0a.js",
+    "precache-manifest.42e1236e7ba737f5dcba51be79030cab.js": "/react-hook-canvas/precache-manifest.42e1236e7ba737f5dcba51be79030cab.js",
     "service-worker.js": "/react-hook-canvas/service-worker.js",
     "static/css/main.28819101.chunk.css.map": "/react-hook-canvas/static/css/main.28819101.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.c8e84b5a.js",
-    "static/js/2.07a4bf14.chunk.js",
+    "static/js/2.5e754014.chunk.js",
     "static/css/main.28819101.chunk.css",
-    "static/js/main.f086265d.chunk.js"
+    "static/js/main.62fe39cc.chunk.js"
   ]
 }
