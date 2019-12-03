@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 const CORS_EVERYWHERE = 'https://cors-anywhere.herokuapp.com/';
 
-export function CanvasImageComponent({imageUrl, onChange}) {
+export const CanvasImageComponent =({imageUrl, onChange}) => {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -40,5 +40,5 @@ export function CanvasImageComponent({imageUrl, onChange}) {
     }, [imageUrl, onChange]);
 
     return <canvas width={1280} height={1280} ref={canvasRef} />;
-}
+};
 

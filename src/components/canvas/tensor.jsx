@@ -3,7 +3,7 @@ import {LoadingComponent} from "../loader/loader";
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import {PredictionTableComponent} from "../table";
 
-export function TensorPredictionComponent({imageData}) {
+export const TensorPredictionComponent = React.memo(({imageData}) => {
     const [loading, setLoading] = useState(true);
     const [result, setResult] = useState([]);
     const [pending, setPending] = useState(false);
@@ -61,4 +61,4 @@ export function TensorPredictionComponent({imageData}) {
             }
         </>
     )
-}
+});
